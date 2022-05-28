@@ -52,9 +52,9 @@ def QR(macierz):
 
 
 A = np.array([
-    [2, 0],
-    [0, 1],
-    [1, 2]
+    [1, 0, 1],
+    [1, 1, 0],
+    [0, 1, 1]
 ])
 
 QR(A)
@@ -74,4 +74,4 @@ def a_k(A, k):
     return np.round(matrix, 3)
 
 
-# print("\n\n", a_k(A, 100))
+# print("\n\n", a_k(A, 10))
