@@ -28,16 +28,11 @@ def print_arr(tab):
 
 
 def random_klasa_decyzyjna(tab):
-    # nadanie randomowej klasy decyzyjnej
     for i in range(len(tab)):
         tab[i][len(tab[0]) - 1] = random.randint(0, 1)
 
 
 def grupowanie_po_klasach_dezyjnych(tab):
-    """
-    Funkcja tworzy słownik pogrupowanych wierszy po klasie decyzyjnej.
-    zwraca: {klasa_decyzyjna: [wiersze]}
-    """
     slownik = defaultdict(list)
     for i in range(len(tab)):
         klasa_decyzyjna = (tab[i][len(tab[0]) - 1])
@@ -46,10 +41,6 @@ def grupowanie_po_klasach_dezyjnych(tab):
 
 
 def suma_metryk(target, tab):
-    """
-    Funkcja liczy sumę odległości dla pojedyńczego wiersza
-    zwraca: suma odległości
-    """
     suma = 0
     for i in range(len(tab)):
         suma += metryka_euklidesowa_wektory(target, tab[i])
@@ -57,10 +48,6 @@ def suma_metryk(target, tab):
 
 
 def minimalna_metryka(slownik):
-    """
-    Funkcja tworzy słownik z minimami sum metryk euklidesowych
-    zwraca: {klasa_decyzyjna: (wiersz, index_wiersza)}
-    """
     slownik_minima = {}
     for key in slownik:
         wiersz = slownik[key][0]
@@ -75,12 +62,6 @@ def minimalna_metryka(slownik):
 
 
 def kolorowanie(slownik_minim, slownik_pogrupowany):
-    """
-    Funkcja, która zmienia klasy decyzyjne.
-
-    Sprawdza, do której minimalnej sumy metryki euklidesa ma bliżej dany wiersz z danej grupy.
-    Jeżeli wiersz ma 'bliżej' do innej klasy decyzyjnej, to zmienia klasę decyzyjną
-    """
     licznik_zmian = 0
     zmiana = False
     nowy_slownik_pogrupowany = defaultdict(list)

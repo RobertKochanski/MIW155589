@@ -1,11 +1,3 @@
-# pd
-# lista składa się z inych list
-# y = lita[0]
-# pierwszy wiersz to y
-# d(y,x), gdzie x należy do listy bez elementu z indeksem 0
-# słownik, gdzie klucz to klasa decyzyjna x(ostani element to wniosek), a wartość to lista z odległościami
-# {0 : lista z odleglosciami , 1: [], }
-
 import math
 
 
