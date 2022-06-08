@@ -31,16 +31,16 @@ def svd(A):
 # A = np.array([[3, 2],
 #              [1, 3]])
 
-# A = np.array([[4, 1, 0],
-#              [1, 3, 1],
-#              [3, 1, 5]])
+A = np.array([[4, 1, 0],
+             [1, 3, 1],
+             [3, 1, 5]])
 
 # A = np.array([[1, 1],
 #              [1, 0],
 #              [4, 1]])
 
-A = np.array([[1, 1, 0],
-             [1, 5, 1]])
+# A = np.array([[1, 1, 0],
+#              [1, 5, 1]])
 
 if A.shape[0] < A.shape[1]:
     A = A.T
@@ -52,5 +52,3 @@ else:
     u, s, vt = svd(A)
     print("A:", A, sep="\n")
     print("\nU * E * VT: \n", np.round(u @ s @ vt, 0))
-
-

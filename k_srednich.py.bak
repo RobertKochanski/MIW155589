@@ -121,7 +121,7 @@ def zgodnosc(oryginal, hep):
 
 # ======================
 slownik = k_srednich('australian.dat')
-print('============== Wynik k_srednich ==============')
+print('============== Wynik Hephaestus ==============')
 for k in slownik:
     print(f'Klasa decyzyjna: {k}: {slownik[k]}')
 oryginal = load_file('australian.dat')
